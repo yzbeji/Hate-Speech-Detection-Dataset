@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hate-speech-detection-dataset"
+version = "0.1.0"
+description = "Romanian social media comments dataset for hate speech detection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "playwright==1.53.0",
+  "pydantic==2.11.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[project.scripts]
+comment-extractor = "comment_extractor.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts"]
+testpaths = ["tests"]

@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Raw scraped data contains personal data: never commit it
+data/raw/
+
+# Browser profile with login cookies
+.browser-profile/
