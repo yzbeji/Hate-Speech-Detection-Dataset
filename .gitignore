@@ -224,3 +224,6 @@ data/raw/
 
 # Browser profile with login cookies
 .browser-profile/
+
+# List of scraped post URLs: kept private
+urls.txt
